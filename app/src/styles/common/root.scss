@@ -1,0 +1,29 @@
+$main-color: #fff;
+$bg-logo: #4A90E2;
+$bg-blue: #4A90E2;
+$bg-gray: #EBEBEB;
+$bg-btn: #232323;
+$bg-footer: #171717;
+$title-gray: #CECECE;
+$bg-icon: #373737;
+$bg-newsletter: #373737;
+$nav-menu-hover: #929EAF;
+
+$Lato: ('Regular');
+
+@each $name in $Lato {
+    @font-face {
+        font-family: 'L';
+        src: url(../fonts/Lato/Lato-#{$name}.woff2);
+    }
+}
+
+$PT-Sans: ('Regular', 400),('Italic', 500),('Bold', 700);
+
+@each $name, $weight in $PT-Sans {
+    @font-face {
+        font-family: 'P';
+        src: url(../fonts/PT-Sans/PTSans-#{$name}.woff2);
+        font-weight: $weight;
+    }
+}

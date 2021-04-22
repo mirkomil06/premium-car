@@ -1,0 +1,69 @@
+ 
+
+- var card_right = [{posts: 'Popular posts', img: 'img/Popular_posts-1.jpg', title: 'One of Saturn’s largest rings may be newer than anyone', date: 'Food & cooking bloger'},{img: 'img/Popular_posts-2.jpg', title: 'One of Saturn’s largest rings may be newer than anyone', date: 'Food & cooking bloger'},{img: 'img/Popular_posts-3.jpg', title: 'One of Saturn’s largest rings may be newer than anyone', date: 'Food & cooking bloger'},]
+
+- var instagram = [{img: 'img/Rectangle Copy 1.jpg'},{img: 'img/Rectangle Copy 2.jpg'},{img: 'img/Rectangle Copy 3.jpg'},{img: 'img/Rectangle Copy 4.jpg'},{img: 'img/Rectangle Copy 5.jpg'},{img: 'img/Rectangle Copy 6.jpg'}]
+
+- var tags = [{title: 'Business'},{title: 'Freelance'},{title: 'Money'},{title: 'Experience'},{title: 'Lifestyle'},{title: 'SEO'},{title: 'Wordpress'},{title: 'Marketing'},{title: 'UX'},{title: 'Modern'},{title: 'Success'},{title: 'Nature'},{title: 'Productivity'},{title: 'Sales page'},{title: 'Sell'},{title: 'Teamwork'},{title: 'Monetize'}]
+
+- var most_popular = [{img: 'img/most popular-1.jpg', date: 'Rickie Baroch - June 6, 2019', title: 'One of Saturn’s largest rings may be newer than anyone', text: 'BMW'},{img: 'img/most popular-2.jpg', date: 'Rickie Baroch - June 6, 2019', title: 'One of Saturn’s largest rings may be newer than anyone', text: 'BMW'},{img: 'img/most popular-3.jpg', date: 'Rickie Baroch - June 6, 2019', title: 'One of Saturn’s largest rings may be newer than anyone', text: 'BMW'},{img: 'img/most popular-4.jpg', date: 'Rickie Baroch - June 6, 2019', title: 'One of Saturn’s largest rings may be newer than anyone', text: 'BMW'}]
+
+main.main 
+    .container 
+        .widget.row
+            .widget-left  
+                .left
+                .widget-left__pagination
+                    //a.btnleft.btn(href="#!")
+                        span.fas.fa-chevron-left 
+                    //a.btnright.btn(href="#!") 
+                        span.fas.fa-chevron-right
+                        
+            .widget-right
+                .leon-hunt
+                    img.leon-hunt__img(src="img/Leon_Hunt.jpg", alt="Leon Hunt.jpg")
+                    h4.leon-hunt__title Leon Hunt
+                    p.leon-hunt__date Food & cooking bloger
+                    p.leon-hunt__text Hi, I'm Leon. Cooking is the way I express my creative side to the world. Welcome to my Kitchen Corner on…
+                    a.btn(href="#!") Continue Reading                
+                each val in card_right
+                    .widget-right__card 
+                        h3.widget-right__title= val.posts
+                        p.vehicle Vehicle
+                        img.widget-right__card-img(src= val.img, alt= val.img)
+                        h3.widget-right__card-title= val.title 
+                        p.widget-right__card-date= val.date
+                .instagram
+                    h3.widget-right__title Instagram
+                    .widget-right__instagram
+                        each val in instagram
+                            img.widget-right__instagram-img(src= val.img, alt= val.img)
+                        a.btn(href="#!")
+                            span.fab.fa-instagram  View instagram
+                .tags 
+                    h3.widget-right__title Tags
+                    .tags-btn 
+                        each val in tags
+                            a.btn(href="#!")= val.title
+                .newsletter
+                    h3.widget-right__title Newsletter
+                    p.newsletter-text Sign up to receive email updates and to hear what's going on.
+                    form.form(action="" method="get")
+                        label.form__label
+                            input.form__input(name="name" type="text" autocomplete="on" placeholder='Your name')
+                        label.form__label
+                            input.form__input(name="email" type="email" autocomplete="on" placeholder='Your email adress')
+                        button.btn Subscribe to newsletter
+
+    .most_popular
+        .container 
+            h2.most_popular__title Most popular
+            .most_popular__card.row   
+                each val in most_popular
+                    .card 
+                        p.vehicle BMW
+                        img.card__img(src= val.img, alt= val.img)
+                        h3.card__title= val.title
+                        p.card__date= val.date
+
+

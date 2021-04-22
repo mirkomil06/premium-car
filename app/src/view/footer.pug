@@ -1,0 +1,53 @@
+footer.footer
+    .container
+        .footer_left
+            .footer_logo 
+                a.logo(href="#!") Premium
+                    span CAR
+            p.footer_text Short description about the company Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            .our_contacts
+                h3.our_contacts-title Keep in touch
+                .our_contacts-icon
+                    a.icon(href="#!") 
+                        span.fab.fa-facebook-f
+                    a.icon(href="#!")
+                        span.fab.fa-twitter
+                    a.icon(href="#!")
+                        span.fab.fa-pinterest-p
+                    a.icon(href="#!")
+                        span.fab.fa-google-plus-g
+                    a.icon(href="#!")
+                        span.fab.fa-instagram
+        .footer_center 
+            h3.footer_center-title Recent posts
+            .footer_center-card 
+                .card 
+                    img.card_img(src="img/Mask.jpg", alt="")
+                    .card_info
+                        h4.card_info__title One of Saturn’s largest rings may be newer than…
+                        p.card_info__date Rickie Baroch - June 6, 2019
+                .card 
+                    img.card_img(src="img/Mask-1.jpg", alt="")
+                    .card_info
+                        h4.card_info__title One of Saturn’s largest rings may be newer than…
+                        p.card_info__date Rickie Baroch - June 6, 2019
+                .card 
+                    img.card_img(src="img/Mask-2.jpg", alt="")
+                    .card_info
+                        h4.card_info__title One of Saturn’s largest rings may be newer than…
+                        p.card_info__date Rickie Baroch - June 6, 2019
+        .footer_right 
+            h3.footer_right-title Newsletter
+            form.form(action="" method="get")
+                label.form__label
+                    input.form__input(name="name" type="text" autocomplete="on" placeholder='Your name')
+                label.form__label
+                    input.form__input(name="email" type="email" autocomplete="on" placeholder='Your email adress')
+                button.btn Subscribe to newsletter
+    .footer-end
+        .container 
+            p.footer-end__title @2019 Logwork. All Right Reserved.
+            ul.nav__menu 
+                each val in ['Home', 'Recipes', 'Article', 'Contact', 'Purchase']
+                    li 
+                        a.nav__menu-link(href="#!")= val

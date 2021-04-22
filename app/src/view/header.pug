@@ -1,0 +1,12 @@
+- var image = [{img: 'img/car_1.jpg', title:'One of Saturn’s largest rings may be newer than anyone', text: 'Rickie Baroch - June 6, 2019'},{img: 'img/car_2.jpg', title:'One of Saturn’s largest rings may be newer than anyone', text: 'Rickie Baroch - June 6, 2019'},{img: 'img/car_3.jpg', title:'One of Saturn’s largest rings may be newer than anyone', text: 'Rickie Baroch - June 6, 2019'},{img: 'img/car_4.jpg', title:'One of Saturn’s largest rings may be newer than anyone', text: 'Rickie Baroch - June 6, 2019'},{img: 'img/car_5.jpg', title:'One of Saturn’s largest rings may be newer than anyone', text: 'Rickie Baroch - June 6, 2019'}]
+
+header.header 
+    .container 
+        .header__content
+            each val in image
+                .header__item
+                    p.vehicle Vehicle
+                    .header__info
+                        p.header__info-text= val.text
+                        h3.header__info-title= val.title
+                    img.header__img(src=val.img, alt= val.img)    

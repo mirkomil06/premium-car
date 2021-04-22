@@ -1,0 +1,1 @@
+"use strict";$(".nav-menu__button").click(function(a){a.preventDefault(),$(this).toggleClass("active"),$(".nav__menu").toggleClass("active")});
